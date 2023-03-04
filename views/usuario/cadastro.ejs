@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+  <%- include('../head.ejs'); %>
+</head>
+<body class="bg-dark">
+  <header><%- include('../menu.ejs'); %></header>
+  <br />
+  <div class="container bg-white">
+    <div class="row justify-content-center">
+      <div class="card">
+        <div class="card-header text-center">
+          <h2>Bem-vindo(a) ao cadastro de usuário</h2>
+        </div>
+        <div class="card-body">
+          <form action="/cadastro" method="post">
+            <div class="row mb-3">
+              <label for="usr" class="col-md-4 col-form-label text-md-end"
+                >Nome</label
+              >
+              <div class="col-md-6">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="nome"
+                  placeholder="Nome"
+                />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="usr" class="col-md-4 col-form-label text-md-end"
+                >Email</label
+              >
+              <div class="col-md-6">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="email"
+                  placeholder="Email"
+                />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="usr" class="col-md-4 col-form-label text-md-end"
+                >Senha</label
+              >
+              <div class="col-md-6">
+                <input
+                  type="password"
+                  class="form-control"
+                  name="senha"
+                  placeholder="Senha"
+                />
+              </div>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary text-center">
+                Enviar
+              </button>
+              <br />
+              <button class="btn btn-danger text-center" href="/login">
+                Já possui cadastro? Faça login aqui!
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

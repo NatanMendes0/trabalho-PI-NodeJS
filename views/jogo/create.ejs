@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    <%- include('../head.ejs'); %>
+</head>
+  <body class="bg-dark">
+    <header><%- include('../menu.ejs'); %></header>
+    <br>
+    <div class="container bg-white">
+        <h2>Inserir novo Registro</h2>
+        <form action="/create" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="usr">Título</label>
+                <input type="text" class="form-control" name="titulo" placeholder="Nome">
+            </div>
+            <div class="form-group">
+                <label for="usr">Descrição</label>
+                <input type="text" class="form-control" name="descricao" placeholder="Descrição">   
+            </div>
+            <div class="form-group">
+                <label for="usr">Preço</label>
+                <input type="number" class="form-control" name="preco" placeholder="Preço">
+            </div>
+            <div class="form-group">
+                <label for="img">Imagem</label>
+                <input type="file" class="form-control" name="imagem" placeholder="Imagem">
+            </div>
+            <div class="form-group">
+                <label for="usr">Categoria</label>
+                <select name="categoria_id" class="form-control">
+                        <option value="1">Ação</option>
+                        <option value="2">Aventura</option>
+                        <option value="3">Corrida</option>
+                        <option value="4">Estratégia</option>
+                        <option value="5">Esporte</option>
+                        <option value="6">FPS</option>
+                        <option value="7">Luta</option>
+                        <option value="8">RPG</option>
+                        <option value="9">Simulação</option>
+                        <option value="10">Terror</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>

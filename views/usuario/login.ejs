@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+  <%- include('../head.ejs'); %>
+</head>
+<body class="bg-dark">
+  <header><%- include('../menu.ejs'); %></header>
+  <br />
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-4 mt-5">
+        <div class="card">
+          <div class="card-header text-center">
+            <h2>Login</h2>
+          </div>
+          <div class="card-body">
+            <form action="/login" method="post">
+              <div class="row mb-3 text-center">
+                <label for="usr" class="col-md-4 col-form-label text-md-end"
+                  >Email</label
+                >
+                <div class="col-md-6">
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    placeholder="Email"
+                  />
+                </div>
+              </div>
+              <div class="row mb-3 text-center">
+                <label for="pwd" class="col-md-4 col-form-label text-md-end"
+                  >Senha</label
+                >
+                <div class="col-md-6">
+                  <input
+                    type="password"
+                    class="form-control"
+                    name="senha"
+                    placeholder="Senha"
+                  />
+                </div>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">Entrar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

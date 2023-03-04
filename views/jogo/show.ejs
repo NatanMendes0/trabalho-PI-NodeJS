@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+  <%- include('../head.ejs'); %>
+</head>
+<body class="bg-dark">
+  <header><%- include('../menu.ejs'); %></header>
+  <div class="container">
+    <h2>Registros</h2>
+    <table class="table table-bordered table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Senha</th>
+          <th>Imagem</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% dadosUsuario.forEach(function(dados) { %>
+        <tr>
+          <td><%= dados.nome %></td>
+          <td><%= dados.email %></td>
+          <td><%= dados.senha %></td>
+          <td><img src="/upload/<%= dados.imagem %>" class="img-thumbnail"></td>
+          <td>
+            <a href="/edit/<%=dados.id %>">
+              <span class="material-icons">create</span>
+            </a>
+            <a href="/delete/<%=dados.id %>">
+              <span class="material-icons">delete</span>
+            </a>
+          </td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+  <button><a href="/" class="material-icons">arrow_back</a></button>
+</body>

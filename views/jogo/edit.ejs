@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+  <%- include('../head.ejs'); %>
+</head>
+<body class="bg-dark">
+  <header><%- include('../menu.ejs'); %></header>
+  <div class="container">
+    <h2>Editar</h2>
+    <% dadosUsuario.forEach(function(dados){ %>
+    <form action="/edit/<%=dados.id %>" method="post">
+      <div class="form-group">
+        <label for="usr">Nome:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="usr"
+          name="nome"
+          value="<%= dados.nome %>"
+        />
+      </div>
+      <div class="form-group">
+        <label for="usr">Email:</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          value="<%= dados.email %>"
+        />
+      </div>
+      <div class="form-group">
+        <label for="pwd">Senha:</label>
+        <input
+          type="password"
+          class="form-control"
+          id="senha"
+          name="senha"
+          value="<%= dados.senha %>"
+        />
+      </div>
+      <div class="form-group">
+        <label for="img">Imagem:</label>
+        <input
+          type="file"
+          class="form-control"
+          id="imagem"
+          name="imagem"
+          value="<%= dados.imagem %>"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Atualizar</button>
+    </form>
+    <% }); %>
+  </div>
+  <button><a href="/show" class="material-icons">arrow_back</a></button>
+</body>
